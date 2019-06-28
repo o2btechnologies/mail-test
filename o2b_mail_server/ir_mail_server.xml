@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Mail Customization -->
+        <record id="ir_mail_server_form_inh1" model="ir.ui.view">
+            <field name="model">ir.mail_server</field>
+            <field name="inherit_id" ref="base.ir_mail_server_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="after_postfix"/>
+                    <field name="post_limit_exceed"/>
+                </xpath>
+            </field>
+        </record>
+</odoo>
